@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-19T18:48:08 JST" name="Default suite" finished-at="2026-05-19T18:48:43 JST" duration-ms="34143">
+    <groups>
+    </groups>
+    <test started-at="2026-05-19T18:48:08 JST" name="Default test" finished-at="2026-05-19T18:48:43 JST" duration-ms="34143">
+      <class name="tests.UpdateBranchTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.UpdateBranchTest@6e01f9b0]" started-at="2026-05-19T18:48:09 JST" name="setUp" finished-at="2026-05-19T18:48:10 JST" duration-ms="1687" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loginBeforeEditBranch()[pri:0, instance:tests.UpdateBranchTest@6e01f9b0]" started-at="2026-05-19T18:48:10 JST" name="loginBeforeEditBranch" finished-at="2026-05-19T18:48:29 JST" duration-ms="19285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginBeforeEditBranch -->
+        <test-method signature="testVerifyEditBranch()[pri:1, instance:tests.UpdateBranchTest@6e01f9b0]" started-at="2026-05-19T18:48:29 JST" name="testVerifyEditBranch" finished-at="2026-05-19T18:48:43 JST" duration-ms="13070" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVerifyEditBranch -->
+      </class> <!-- tests.UpdateBranchTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
