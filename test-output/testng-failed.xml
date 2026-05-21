@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.UpdateBranchTest">
+      <class name="tests.CheckUserTest">
         <methods>
-          <include name="testVerifyEditBranch"/>
-          <include name="loginBeforeEditBranch"/>
+          <include name="loginBeforeUserTest"/>
+          <include name="testVerifyEditUserModal"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- tests.UpdateBranchTest -->
+      </class> <!-- tests.CheckUserTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -20,22 +20,17 @@ public class UpdateBranchTest extends BaseTest {
 	public void loginBeforeEditBranch() {
 		LoginPage loginPage = new LoginPage(driver);
 
-		// 1. Truy cập trang Login
 		loginPage.navigateTo("https://dev3.dev.sfit-local.com/login");
 
-		// 2. Đăng nhập bước 1 (Cognito)
 		loginPage.loginWithCognito("developer", "92W4t2QH-@TouyUv@qoJ");
 		loginPage.sleep(2);
 
-		// 3. Click nút Đăng nhập với Microsoft
 		loginPage.clickMicrosoftLogin();
 		loginPage.sleep(2);
 
-		// 4. Đăng nhập bước 2 (Microsoft)
 		loginPage.loginWithMicrosoft("sfit_choice_ie-verification1@initial-engine.io", "F%866346732819uj");
 		loginPage.sleep(3);
 
-		// Đợi đến khi URL chuyển sang màn Dashboard
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.urlContains("/crm/tasks"));
 	}
@@ -45,35 +40,39 @@ public class UpdateBranchTest extends BaseTest {
 	public void testVerifyEditBranch() {
 		BranchPage branchPage = new BranchPage(driver);
 
-		// Bước 1: Nhấn menu 支店・グループ để vào màn hình Branchs
 		branchPage.clickBranchMenu();
-		branchPage.sleep(3); // Đợi trang danh sách load
+		branchPage.sleep(3);
 
-		// Bước 2: Nhấn nút 編集 (Edit) của bản ghi đầu tiên
-		branchPage.clickEditFirstBranch();
-		branchPage.sleep(2); // Đợi form Edit bật lên
-
-		// Bước 3: Kiểm tra tất cả các trường (trừ 種別) đều bị disable
-		org.testng.Assert.assertTrue(branchPage.isBranchNameDisabled(), "Tên chi nhánh phải bị disable");
-		org.testng.Assert.assertTrue(branchPage.isEmailDisabled(), "Email phải bị disable");
-		org.testng.Assert.assertTrue(branchPage.isBranchCodeDisabled(), "Mã chi nhánh phải bị disable");
-		org.testng.Assert.assertTrue(branchPage.isPhoneNumberDisabled(), "Số điện thoại phải bị disable");
-		org.testng.Assert.assertTrue(branchPage.isAddressDisabled(), "Địa chỉ phải bị disable");
-
-		// Bước 4: Kiểm tra trường 種別 (Type) đang được enable và có đúng 3 giá trị
-		org.testng.Assert.assertTrue(branchPage.isTypeEnabled(), "Trường Loại (Type) phải được enable");
-		int typeOptionsCount = branchPage.getTypeOptionsCount();
-		org.testng.Assert.assertEquals(typeOptionsCount, 3, "Trường Loại (Type) phải có đúng 3 options");
-
-		// Bước 5: Nhấn nút Hủy (Cancel)
-		branchPage.clickCancel();
-		branchPage.sleep(2); // Đợi form đóng lại
-
-		// Bước 6: Mở lại form Edit và nhấn Cập nhật
 		branchPage.clickEditFirstBranch();
 		branchPage.sleep(2);
 
-		branchPage.clickSave(); // btn_submit cho Cập nhật
-		branchPage.sleep(3); // Đợi cập nhật xong
+		org.testng.Assert.assertTrue(branchPage.isBranchNameDisabled(), "Tên chi nhánh phải bị disable");
+		System.out.println("Tên chi nhánh đã disable");
+
+		org.testng.Assert.assertTrue(branchPage.isEmailDisabled(), "Email phải bị disable");
+		System.out.println("Email đã disable");
+
+		org.testng.Assert.assertTrue(branchPage.isBranchCodeDisabled(), "Mã chi nhánh phải bị disable");
+		System.out.println("Mã chi nhánh đã disable");
+
+		org.testng.Assert.assertTrue(branchPage.isPhoneNumberDisabled(), "Số điện thoại phải bị disable");
+		System.out.println("Số điện thoại đã disable");
+
+		org.testng.Assert.assertTrue(branchPage.isAddressDisabled(), "Địa chỉ phải bị disable");
+		System.out.println("Địa chỉ đã disable");
+
+		org.testng.Assert.assertTrue(branchPage.isTypeEnabled(), "Trường Loại (Type) phải được enable");
+
+		int typeOptionsCount = branchPage.getTypeOptionsCount();
+		org.testng.Assert.assertEquals(typeOptionsCount, 3, "Trường Loại (Type) phải có đúng 3 options");
+
+		branchPage.clickCancel();
+		branchPage.sleep(2);
+
+		branchPage.clickEditFirstBranch();
+		branchPage.sleep(2);
+
+		branchPage.clickSave();
+		branchPage.sleep(3);
 	}
 }
