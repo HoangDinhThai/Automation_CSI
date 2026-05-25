@@ -49,10 +49,16 @@ public class UpdateBranchTest extends BaseTest {
 
 		branchPage.clickCancel();
 		branchPage.sleep(2);
+	}
+	
+	@Test(priority = 2)
+	@Description("Kiểm tra chức năng cập nhật thành công khi nhấn nút Cập nhật (Save)")
+	public void testSaveBranch() {
+		BranchPage branchPage = new BranchPage(driver);
 
 		branchPage.clickEditFirstBranch();
 		branchPage.sleep(2);
-
+		
 		branchPage.clickSave();
 		branchPage.sleep(3);
 	}
