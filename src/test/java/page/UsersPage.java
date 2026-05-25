@@ -5,11 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class UsersPage extends BasePage {
-	// Locator cho menu ユーザー
 	private final By usersMenu = By.xpath("//*[contains(text(), 'ユーザー')]");
-	// Locators trong màn hình danh sách Users
 	private final By editFirstButton = By.xpath("//*[@id='datatable']/tbody/tr[1]//button[contains(., '編集')]");
-	// Locators trong modal Edit User
 	private final By staffNumberInput = By.id("staff_number");
 	private final By nameInput = By.id("name");
 	private final By branchCdSelect = By.id("branch_cd");

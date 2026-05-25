@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-21T16:34:06 JST" name="Default suite" finished-at="2026-05-21T16:34:39 JST" duration-ms="32317">
+  <suite started-at="2026-05-25T18:49:55 JST" name="Default suite" finished-at="2026-05-25T18:50:27 JST" duration-ms="31842">
     <groups>
     </groups>
-    <test started-at="2026-05-21T16:34:06 JST" name="Default test" finished-at="2026-05-21T16:34:39 JST" duration-ms="32317">
-      <class name="tests.UpdateBranchTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.UpdateBranchTest@6e01f9b0]" started-at="2026-05-21T16:34:06 JST" name="setUp" finished-at="2026-05-21T16:34:08 JST" duration-ms="1637" status="PASS">
+    <test started-at="2026-05-25T18:49:55 JST" name="Default test" finished-at="2026-05-25T18:50:27 JST" duration-ms="31842">
+      <class name="tests.CheckUserTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckUserTest@6c61a903]" started-at="2026-05-25T18:49:55 JST" name="setUp" finished-at="2026-05-25T18:49:57 JST" duration-ms="1512" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loginBeforeEditBranch()[pri:0, instance:tests.UpdateBranchTest@6e01f9b0]" started-at="2026-05-21T16:34:08 JST" name="loginBeforeEditBranch" finished-at="2026-05-21T16:34:26 JST" duration-ms="17637" status="PASS">
+        <test-method is-config="true" signature="loginBeforeUserTest()[pri:0, instance:tests.CheckUserTest@6c61a903]" started-at="2026-05-25T18:49:57 JST" name="loginBeforeUserTest" finished-at="2026-05-25T18:50:14 JST" duration-ms="17322" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginBeforeEditBranch -->
-        <test-method signature="testVerifyEditBranch()[pri:1, instance:tests.UpdateBranchTest@6e01f9b0]" started-at="2026-05-21T16:34:26 JST" name="testVerifyEditBranch" finished-at="2026-05-21T16:34:39 JST" duration-ms="12915" status="PASS">
+        </test-method> <!-- loginBeforeUserTest -->
+        <test-method signature="testVerifyEditUserModal()[pri:1, instance:tests.CheckUserTest@6c61a903]" started-at="2026-05-25T18:50:14 JST" name="testVerifyEditUserModal" finished-at="2026-05-25T18:50:22 JST" duration-ms="7793" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testVerifyEditBranch -->
-      </class> <!-- tests.UpdateBranchTest -->
+        </test-method> <!-- testVerifyEditUserModal -->
+        <test-method signature="testSaveEditUser()[pri:2, instance:tests.CheckUserTest@6c61a903]" started-at="2026-05-25T18:50:22 JST" name="testSaveEditUser" finished-at="2026-05-25T18:50:27 JST" duration-ms="5122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSaveEditUser -->
+      </class> <!-- tests.CheckUserTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

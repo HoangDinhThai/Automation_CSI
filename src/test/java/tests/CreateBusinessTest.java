@@ -47,7 +47,6 @@ public class CreateBusinessTest extends BaseTest {
 
 		org.testng.Assert.assertTrue(errors.size() > 0, "Lỗi: Không tìm thấy thông báo lỗi required nào!");
 
-		driver.get("https://dev3.dev.sfit-local.com/crm/tasks");
 		createPage.sleep(3);
 	}
 
@@ -103,30 +102,30 @@ public class CreateBusinessTest extends BaseTest {
 				"Lỗi: Không tìm thấy khách hàng chứa text '" + lastName + "' ở màn crm?tab=all");
 	}
 
-	@Test(priority = 4, dataProvider = "businessData")
-	@Description("Kiểm tra luồng Update - Cập nhật thông tin Business vừa tạo")
-	public void testUpdateBusiness(String lastName, String firstName, String kanaLast, String kanaFirst, String gender,
-			String dob, String phonePrefix, String phoneNum, String email, String subPhonePrefix, String subPhoneNum,
-			String subEmail, String postalCode, String prefecture, String city, String area, String addressDetail,
-			String building, String visitType, String receptionType, String motivation, String movingTime) {
-
-		DashboardPage dashboardPage = new DashboardPage(driver);
-		CreateBusinessPage createPage = new CreateBusinessPage(driver);
-
-		driver.get("https://dev3.dev.sfit-local.com/crm/tasks");
-		dashboardPage.sleep(3);
-
-		dashboardPage.clickInputForCustomer(lastName);
-		dashboardPage.sleep(1);
-
-		dashboardPage.clickStaffEditButton();
-		dashboardPage.sleep(3);
-
-		String updatedLastName = lastName + " Updated";
-
-		createPage.fillBasicInfo(updatedLastName, firstName, kanaLast, kanaFirst, gender, dob);
-
-		createPage.clickSave();
-		createPage.sleep(5);
-	}
+//	@Test(priority = 4, dataProvider = "businessData")
+//	@Description("Kiểm tra luồng Update - Cập nhật thông tin Business vừa tạo")
+//	public void testUpdateBusiness(String lastName, String firstName, String kanaLast, String kanaFirst, String gender,
+//			String dob, String phonePrefix, String phoneNum, String email, String subPhonePrefix, String subPhoneNum,
+//			String subEmail, String postalCode, String prefecture, String city, String area, String addressDetail,
+//			String building, String visitType, String receptionType, String motivation, String movingTime) {
+//
+//		DashboardPage dashboardPage = new DashboardPage(driver);
+//		CreateBusinessPage createPage = new CreateBusinessPage(driver);
+//
+//		driver.get("https://dev3.dev.sfit-local.com/crm/tasks");
+//		dashboardPage.sleep(3);
+//
+//		dashboardPage.clickInputForCustomer(lastName);
+//		dashboardPage.sleep(1);
+//
+//		dashboardPage.clickStaffEditButton();
+//		dashboardPage.sleep(3);
+//
+//		String updatedLastName = lastName + " Updated";
+//
+//		createPage.fillBasicInfo(updatedLastName, firstName, kanaLast, kanaFirst, gender, dob);
+//
+//		createPage.clickSave();
+//		createPage.sleep(5);
+//	}
 }

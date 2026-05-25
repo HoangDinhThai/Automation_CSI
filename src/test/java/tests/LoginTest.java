@@ -20,7 +20,7 @@ public class LoginTest extends BaseTest {
     public void testLogin_Failed_UnregisteredUser() {
         LoginPage loginPage = new LoginPage(driver);
 
-        loginPage.navigateTo("https://dev5.dev.sfit-local.com/login");
+        loginPage.navigateTo("https://dev3.dev.sfit-local.com/login");
         loginPage.sleep(2);
 
         loginPage.loginWithCognito("developer", "92W4t2QH-@TouyUv@qoJ");

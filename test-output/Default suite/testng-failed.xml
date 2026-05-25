@@ -6,7 +6,7 @@
       <class name="tests.CheckUserTest">
         <methods>
           <include name="loginBeforeUserTest"/>
-          <include name="testVerifyEditUserModal"/>
+          <include name="testSaveEditUser"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- tests.CheckUserTest -->

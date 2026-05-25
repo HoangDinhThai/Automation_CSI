@@ -50,11 +50,17 @@ public class CheckUserTest extends BaseTest {
 
 		usersPage.clickCancel();
 		usersPage.sleep(2);
+	}
+
+	@Test(priority = 2)
+	@Description("Kiểm tra chức năng cập nhật thành công khi nhấn nút Cập nhật (Save)")
+	public void testSaveEditUser() {
+		UsersPage usersPage = new UsersPage(driver);
 
 		usersPage.clickEditFirstUser();
 		usersPage.sleep(2);
-
-		usersPage.clickSave();
-		usersPage.sleep(3);
+		
+	    usersPage.clickSave();
+        usersPage.sleep(3);
 	}
 }
